@@ -30,6 +30,7 @@
         <zipkin.version>2.10.1</zipkin.version>
         <eureka.starter.version>2.1.1.RELEASE</eureka.starter.version>
         <openfeign.version>2.1.1.RELEASE</openfeign.version>
+        <zuul.version>2.1.1.RELEASE</zuul.version>
     </properties>
 
     <dependencyManagement>
