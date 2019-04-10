@@ -206,4 +206,12 @@
             </resource>
         </resources>
     </build>
+
+    <repositories>
+        <repository>
+            <id>public-maven</id>
+            <name>Public mvn repository</name>
+            <url>http://mvnrepository.com/</url>
+        </repository>
+    </repositories>
 </project>
