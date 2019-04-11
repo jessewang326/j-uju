@@ -8,6 +8,7 @@ server:
 eureka:
   instance:
     hostname: ec2-34-235-157-88.compute-1.amazonaws.com
+    preferIpAddress: false
   client:
     registerWithEureka: true
     fetchRegistry: true
