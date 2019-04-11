@@ -7,9 +7,9 @@ server:
 
 eureka:
   instance:
-    hostname: http://ec2-34-235-157-88.compute-1.amazonaws.com
+    hostname: ec2-34-235-157-88.compute-1.amazonaws.com
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:8861/eureka/

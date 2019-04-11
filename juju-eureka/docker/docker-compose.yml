@@ -2,13 +2,13 @@ version: '3.7'
 services:
   juju-eureka-1:
     restart: always
-    image: ec2-34-235-157-88-eureka:0.0.1
+    image: ec2-34-235-157-88-eureka
     container_name: juju-eureka-1
     ports:
       - 8761:8761
   juju-eureka-2:
     restart: always
-    image: ec2-34-235-157-88-eureka:0.0.1
+    image: ec2-34-235-157-88-eureka
     container_name: juju-eureka-2
     ports:
       - 8861:8761
