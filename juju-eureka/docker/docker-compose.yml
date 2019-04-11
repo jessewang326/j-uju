@@ -4,11 +4,13 @@ services:
     restart: always
     image: ec2-34-235-157-88-eureka
     container_name: juju-eureka-1
+    command:java -jar -Dspring.profiles.active=prod1 /app/juju-eureka-0.0.1-SNAPSHOT.jar
     ports:
       - 8761:8761
   juju-eureka-2:
     restart: always
     image: ec2-34-235-157-88-eureka
     container_name: juju-eureka-2
+    command:java -jar -Dspring.profiles.active=prod2 /app/juju-eureka-0.0.1-SNAPSHOT.jar
     ports:
       - 8861:8761
