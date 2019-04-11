@@ -35,7 +35,9 @@ public class LoginFilter extends ZuulFilter {
         HttpServletRequest request = context.getRequest();
         logger.info("{} >>> {}", request.getMethod(), request.getRequestURL().toString());
         String token = request.getParameter("token");
-        if (token == null) {
+        //TODO TO ADD
+        //if (token == null) {
+        if (token != null) {
             logger.warn("Token is empty");
             context.setSendZuulResponse(false);
             context.setResponseStatusCode(401);

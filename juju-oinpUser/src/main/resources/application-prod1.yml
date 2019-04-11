@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: juju-oinp-user
+
+server:
+  port: 8764
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ec2-34-235-157-88.compute-1.amazonaws.com:8761/eureka/, http://ec2-34-235-157-88.compute-1.amazonaws.com:8861/eureka/

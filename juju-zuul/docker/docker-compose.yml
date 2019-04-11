@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  juju-zuul-1:
+    restart: always
+    image: ec2-34-235-157-88-zuul
+    container_name: juju-zuul-1
+    command: java -jar -Dspring.profiles.active=prod1 /app/juju-zuul-0.0.1-SNAPSHOT.jar
+    ports:
+      - 8769:8769
