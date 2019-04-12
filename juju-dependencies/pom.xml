@@ -31,6 +31,8 @@
         <eureka.starter.version>2.1.1.RELEASE</eureka.starter.version>
         <openfeign.version>2.1.1.RELEASE</openfeign.version>
         <zuul.version>2.1.1.RELEASE</zuul.version>
+        <tk.mabatis.version>2.1.5</tk.mabatis.version>
+        <tk.mabatis.mapper.version>4.1.5</tk.mabatis.mapper.version>
     </properties>
 
     <dependencyManagement>

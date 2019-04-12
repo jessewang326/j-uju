@@ -1,7 +1,10 @@
 spring:
   application:
     name: juju-oinp-user
-
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: qwert
 server:
   port: 8763
 

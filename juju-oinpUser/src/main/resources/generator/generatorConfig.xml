@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- database connection config -->
+    <properties resource="jdbc.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- tk.mybatis plugin -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="net.dataoriented.utils.MyBatisMapper"/>
+        </plugin>
+
+        <!-- database connection -->
+        <jdbcConnection
+                driverClass="${jdbc.driverClass}"
+                connectionURL="${jdbc.connectionURL}"
+                userId="${jdbc.username}"
+                password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!-- entity class path -->
+        <javaModelGenerator targetPackage="net.dataoriented.juju.onipuser.entity" targetProject="src/main/java"/>
+
+        <!-- XML location -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- DAO location -->
+        <javaClientGenerator
+                targetPackage="net.dataoriented.juju.onipuser.mapper"
+                targetProject="src/main/java"
+                type="XMLMAPPER"/>
+
+        <!-- 配置需要生成的表，% 代表所有 -->
+        <table tableName="ONIP_USER">
+            <!-- mysql 配置 -->
+            <generatedKey column="oinpUserId" sqlStatement="Postgres" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
